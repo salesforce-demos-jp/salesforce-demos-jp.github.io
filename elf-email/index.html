@@ -1,0 +1,151 @@
+<html>
+<head>
+    <!-- elf connections 2019 email -->
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="images/Mail_2x.png">
+    <title>e.l.f. Email</title>
+    <style>
+        /* iOS web app boiler plate */
+        /* iphone X / XS web app first */
+            
+        body {
+            margin:0px;
+            padding:0px;
+        }
+
+        header,            
+        main,
+        footer {
+            width: 100%;
+            height: auto;            
+        }
+
+        header {
+            position: fixed;
+            width: inherit;
+        }
+
+        main {
+            /* Removed for email package padding: 87px 0 75px; */
+            padding: 0;
+        }
+
+        footer {
+            position: fixed;
+            bottom: -10px;
+            width: inherit;
+        }
+
+        .app {
+            position: absolute;
+            top: 0px;
+            width:375px;
+            height:812px;
+            /* smooth scrolling in iOS web app, turn off for simulator */
+            /* 
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch; 
+            */
+        }
+
+        .responsive {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+        .carousel-container {
+            position: absolute;
+            top: 612px;
+            width: 100%;
+            height: 161px;
+            overflow-y: hidden;
+        }
+        .carousel-inner {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-scroll-snap-type: mandatory;
+            -webkit-scroll-snap-destination: 50% 50%;  
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 20px;    
+        }
+        .carousel-item {
+            height: 161px;
+            width: auto;
+            scroll-snap-align: center;
+            -webkit-scroll-snap-coordinate: 50% 50%;
+        }
+        .carousel-item:first-child {
+            padding-left: 5px;
+        }
+        .carousel-item:last-child {
+            padding-right: 5px;
+        }
+
+        .button-wrapper {
+            position: absolute;
+            top: 900px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .button-wrapper a {
+            display: inline-block;
+        }
+
+        .button {
+            height: 45px;
+            width: auto;
+            border: none;
+            outline: none;
+        }
+
+        /* iphone XR / XS Max */
+        @media all and (min-device-width : 414px) and (max-device-height : 896px) {
+            .app {                    
+                width:414px;
+                height:896px;                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <!-- removed for email package
+             <header>
+                <img class="responsive" src="images/header-Mailbox_Open.png"/>
+            </header> 
+        -->
+        <main>
+            <!-- removed for email package
+                <img class="responsive" src="images/message-headers.png"/> 
+            -->
+            <img class="responsive" src="images/content.png"/>
+            <div class="carousel-container">
+                <div class="carousel-inner">
+                    <img class="carousel-item" src="images/item-01.png" />
+                    <img class="carousel-item" src="images/item-02.png" />
+                    <img class="carousel-item" src="images/item-03.png" />
+                    <img class="carousel-item" src="images/item-04.png" />
+                    <img class="carousel-item" src="images/item-05.png" />
+                    <img class="carousel-item" src="images/item-06.png" />
+                    <img class="carousel-item" src="images/item-07.png" />
+                </div>
+            </div>
+            <div class="button-wrapper">
+                <a href="cx-elf://"><img class="button" src="images/cta-button.png"/></a>
+            </div>
+        </main>
+        <!-- removed for email package 
+            <footer>
+                <img class="responsive" src="images/footer-Mailbox_Actions.png"/>
+            </footer> 
+        -->
+    </div>
+    
+</body>
+</html>
